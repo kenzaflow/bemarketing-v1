@@ -1,5 +1,5 @@
 node_modules
-build
+#build
 .dev-build
 .parcel-cache
 package-lock.json
