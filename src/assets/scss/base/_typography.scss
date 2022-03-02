@@ -1,0 +1,63 @@
+/* Typography */
+
+/* Dependencies */
+
+@font-face {
+    font-family: "Bookman Old Style";
+    font-weight: normal;
+    src: url("../fonts/bookman_old_style_regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bookman Old Style";
+    font-weight: bold;
+    src: url("../fonts/bookman_old_style_bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    src: url("../fonts/montserrat_variable.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    src: url("../fonts/montserrat_italic_variable.ttf") format("ttf");
+}
+
+/* Size */
+
+h1 { font-size:     calc(var(--font-base) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)); }
+h2 { font-size:     calc(var(--font-base) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)); }
+h3 { font-size:     calc(var(--font-base) * var(--font-ratio) * var(--font-ratio)); }
+h4 { font-size:     calc(var(--font-base) * var(--font-ratio)); }
+html { font-size:   var(--font-base); }
+h5 { font-size:     calc(var(--font-base) / var(--font-ratio)); }
+h6 { font-size:     calc(var(--font-base) / var(--font-ratio) / var(--font-ratio)); }
+
+/* Family */
+
+html:not(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+}
+
+html {
+    *:not(h5, h6) {
+        line-height: var(--font-ratio);
+        letter-spacing: 0.004rem;
+    }
+    h5, h6 {
+        line-height: calc(var(--font-ratio) * 1.17);
+        letter-spacing: 0.07rem;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

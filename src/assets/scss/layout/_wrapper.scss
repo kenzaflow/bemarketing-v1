@@ -1,0 +1,9 @@
+#wrapper {
+    /* Size */
+    width: 100%;
+    min-height: 100vh;
+
+    & > *:nth-child(2) {
+        margin-top: 100px;
+    }
+}

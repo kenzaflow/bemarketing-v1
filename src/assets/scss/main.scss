@@ -1,0 +1,14 @@
+/* Libs */
+@import 'libs/vars';
+
+/* Base */
+@import 'base/reset';
+@import 'base/page';
+@import 'base/typography';
+
+/* Components */
+@import 'components/header/header';
+@import 'components/footer/footer';
+
+/* Layout */
+@import 'layout/wrapper';

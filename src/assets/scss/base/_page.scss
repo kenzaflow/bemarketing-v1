@@ -1,0 +1,57 @@
+/* Box Model */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    z-index: var(--misc-z-index-base);
+}
+
+html, body {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+body {
+    background-color: var(--palette-background);
+    color: var(--palette-foreground);
+
+    /* Stop initial animations */
+    &.is-preload {
+        *, *:before, *:after {
+            animation: none!important;
+            transition: none!important;
+        }
+        
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--palette-background);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--palette-gray-dark);
+    transition: background-color var(--animation-default);
+    &:hover{
+        background-color: var(--palette-gray-light);
+    }
+}

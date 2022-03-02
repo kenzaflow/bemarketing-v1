@@ -1,0 +1,24 @@
+{
+  "name": "bemarketing",
+  "version": "0.0.1",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "delete-parcel-cache": "del-cli --force .parcel-cache",
+    "delete-dev-build": "del-cli --force .dev-build",
+    "delete-build": "del-cli --force build",
+    "make-dev-build": "parcel --dist-dir .dev-build",
+    "make-build": "parcel build --dist-dir build --no-source-maps --public-url ./",
+    "start": "npm run delete-parcel-cache && npm run delete-dev-build && npm run make-dev-build && npm run delete-dev-build && npm run delete-parcel-cache",
+    "build": "npm run delete-parcel-cache && npm run delete-build && npm run make-build && npm run delete-parcel-cache"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
+    "@parcel/transformer-webmanifest": "^2.3.2",
+    "del-cli": "^4.0.1",
+    "parcel": "^2.3.2"
+  }
+}

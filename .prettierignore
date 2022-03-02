@@ -1,0 +1,7 @@
+build
+
+#
+#   ToDo:   desactivé temporalmente el prettier 
+#           en los .scss porque no respeta las lineas >:(
+#
+**/_*.scss
