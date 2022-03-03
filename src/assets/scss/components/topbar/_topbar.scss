@@ -1,0 +1,83 @@
+html {
+    scroll-padding-top: 100px;
+}
+
+.topbar {
+
+    /* Style */
+    background-color: transparent;
+
+    /* Position */
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+
+    /* Size */
+    height: 100px;
+
+    /* Config */
+    transition: background-color var(--animation-default);
+
+    &.has-scroll {
+        background-color: var(--palette-background);
+    }
+
+}
+
+.topbar .content {
+
+    /* Position */
+    grid-column: 2;
+    justify-self: center;
+
+    /* Size */
+    width: 100%;
+    max-width: var(--size-max-width-large);
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    /* Size */
+    height: 100%;
+
+}
+
+.topbar .content .logo,
+.topbar .content .navbar {
+    /* Grid */
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+
+    /* Size */
+    height: 100%;
+}
+
+.topbar .content .logo {
+    /* Position */
+    grid-column: 1;
+
+    /* Size */
+    padding: 0 calc(var(--font-base) * 2);
+}
+
+.topbar .content .navbar {
+    /* Position */
+    grid-column: 3;
+
+    & > * {
+        /* Grid */
+        display: grid;
+        align-items: center;
+        /* Size */
+        height: 100%;
+        padding: 0 calc(var(--font-base) * 2);
+    }
+}

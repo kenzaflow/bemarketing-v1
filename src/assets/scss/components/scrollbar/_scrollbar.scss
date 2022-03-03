@@ -1,0 +1,22 @@
+* {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--palette-gray-dark);
+    transition: background-color var(--animation-default);
+    &:hover{
+        background-color: var(--palette-gray-light);
+    }
+    
+}

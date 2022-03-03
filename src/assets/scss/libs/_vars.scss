@@ -1,33 +1,36 @@
 
-/* Dependencies */
+// Dependencies
+
 @use "sass:color";
 
     /* var */                    /* value */
 
 :root {
-    
-    /* Misc */
 
-    --misc-z-index-base:        1000;
-
-    /* Animations */
+    // Animations
 
     --animation-default:        200ms ease;
 
-    /* Fonts */
+    // Fonts
 
-    --font-family:              'Bookman Old Style', serif;
-    --font-family-heading:      'Montserrat', sans-serif;
+    --font-family-heading:      'Montserrat';
+    --font-family:              'Bookman Old Style';
 
-    --font-base:                16pt;
+    --font-base:                18px;
     --font-ratio:               calc(4 / 3);
 
-    --font-width:               65ch;   // characters per line
+    --font-width:               50ch;   // characters per line
 
-    /* Palette */
-    --palette-background:       #0a0a0a;
-    --palette-foreground:       #fafafa;
+    // Palette
+
+    --palette-background:     #0a0a0a;
+    --palette-foreground:     #fafafa;
     --palette-gray-dark:        #{color.scale(#fafafa, $lightness: -80%)};
     --palette-gray-light:       #{color.scale(#0a0a0a, $lightness: 80%)};
-    --palette-accent:           #36aea7;
+    --palette-accent:         #36aea7;
+
+    // Size
+
+    --size-max-width:           1200px;
+    --size-max-width-large:     1600px;
 }

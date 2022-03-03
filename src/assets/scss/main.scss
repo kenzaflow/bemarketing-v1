@@ -5,10 +5,12 @@
 @import 'base/reset';
 @import 'base/page';
 @import 'base/typography';
+@import 'base/colors';
 
 /* Components */
-@import 'components/header/header';
+@import 'components/topbar/topbar';
 @import 'components/footer/footer';
+@import 'components/scrollbar/scrollbar';
 
 /* Layout */
 @import 'layout/wrapper';

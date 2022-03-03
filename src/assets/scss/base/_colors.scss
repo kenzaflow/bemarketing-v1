@@ -1,0 +1,33 @@
+// _colors.scss
+
+.color\:bg {
+    color: var(--palette-background);
+}
+.color\:fg {
+    color: var(--palette-foreground);
+}
+.color\:gray-dark {
+    color: var(--palette-gray-dark);
+}
+.color\:gray-light {
+    color: var(--palette-gray-light);
+}
+.color\:accent {
+    color: var(--palette-accent);
+}
+
+.bg-color\:bg {
+    background-color: var(--palette-background);
+}
+.bg-color\:fg {
+    background-color: var(--palette-foreground);
+}
+.bg-color\:gray-dark {
+    background-color: var(--palette-gray-dark);
+}
+.bg-color\:gray-light {
+    background-color: var(--palette-gray-light);
+}
+.bg-color\:accent {
+    background-color: var(--palette-accent);
+}

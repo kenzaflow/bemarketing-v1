@@ -5,67 +5,113 @@
 
         <title>Be Marketing</title>
         <meta name="description" content="" />
-        <meta property="og:title" content="" />
+        <meta property="og:title" content="Be Marketing" />
         <meta property="og:type" content="" />
         <meta property="og:url" content="" />
         <meta property="og:image" content="" />
         <link rel="manifest" href="site.webmanifest" />
 
-        <link
-            rel="shortcut icon"
-            href="./assets/img/logo-linkedin.jpg"
-            type="image/x-icon"
-        />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./assets/scss/main.scss" />
         <script defer type="module" src="./assets/js/main.js"></script>
     </head>
-    <body class="is-preload">
+    <body outlineNO class="is-preload">
         <div id="wrapper">
-            <header>
-                <a href="#" onclick="window.scrollTo(0, 0)" class="link"
-                    ><div class="logo">BM</div></a
-                >
-                <nav>
-                    <a href="#about" class="link"><h5>Sobre BM</h5></a>
-                    <a href="#services" class="link"><h5>Servicios</h5></a>
-                    <a href="#contact" class="link"><h5>Contacto</h5></a>
-                </nav>
+            <header class="topbar">
+                <div class="content">
+                    <a href="#home" class="logo link big animated"
+                        ><span class="font-size:h2">BM</span></a
+                    >
+                    <nav class="navbar">
+                        <a class="link big animated" href="#about"
+                            ><span>Sobre BM</span></a
+                        >
+                        <a class="link big animated" href="#services"
+                            ><span>Servicios</span></a
+                        >
+                        <a class="link big animated" href="#contact"
+                            ><span>Contacto</span></a
+                        >
+                    </nav>
+                </div>
             </header>
 
-            <section id="home"></section>
+            <section id="home" class="home first">
+                <div class="background"></div>
 
-            <!-- Temp -->
-            <div style="height: 3rem"></div>
-            <div style="padding: 0 3rem">
-                <h1 style="color: var(--palette-accent)">Heading.</h1>
-                <h2>Heading.</h2>
-                <h3>Heading.</h3>
-                <h4>Heading.</h4>
-                <h5>Heading.</h5>
-                <h6>Heading.</h6>
-                <div style="height: 3rem"></div>
-                <p>Paragraph:</p>
-                <p style="width: var(--font-width)">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur sed enim illo rem possimus veritatis deleniti
-                    praesentium debitis eum corporis sint, cum veniam, est
-                    delectus atque iste laborum eos similique!
-                </p>
-            </div>
-            <!-- Temp -->
+                <div class="content">
+                    <h1>Heading 1.</h1>
+                    <h2>Heading 2.</h2>
+                    <h3>Heading 3.</h3>
+                    <h4>Heading 4.</h4>
+                    <br />
+                    <p>Paragraph:</p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Consectetur sed enim illo rem possimus veritatis
+                        deleniti praesentium debitis eum corporis sint, cum
+                        veniam, est delectus atque iste laborum eos similique!
+                    </p>
+                    <br />
+                    <h5>Heading 5.</h5>
+                    <h6>Heading 6.</h6>
+                    <a href="#contact"><span class="link">Link</span></a>
+                    <!-- <br />
+                    <input type="text" style="width: 30ch;" /> -->
+                </div>
+            </section>
 
-            <section id="about"></section>
+            <section id="about" class="bg-color:fg color:bg">
+                <!-- Swap font -->
+
+                <div class="content">
+                    <div class="left">
+                        <h1 class="font:default">Heading 1.</h1>
+                        <h2 class="font:default">Heading 2.</h2>
+                        <h3 class="font:default">Heading 3.</h3>
+                        <h4 class="font:default">Heading 4.</h4>
+                        <br />
+                        <p class="font:heading">Paragraph:</p>
+                        <p class="font:heading">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur sed enim illo rem possimus
+                            veritatis deleniti praesentium debitis eum corporis
+                            sint, cum veniam, est delectus atque iste laborum
+                            eos similique!
+                        </p>
+                        <br />
+                        <h5 class="font:default">Heading 5.</h5>
+                        <h6 class="font:default">Heading 6.</h6>
+                    </div>
+                    <div class="right">
+                        <h1>Heading 1.</h1>
+                        <h2>Heading 2.</h2>
+                        <h3>Heading 3.</h3>
+                        <h4>Heading 4.</h4>
+                        <br />
+                        <p>Paragraph:</p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur sed enim illo rem possimus
+                            veritatis deleniti praesentium debitis eum corporis
+                            sint, cum veniam, est delectus atque iste laborum
+                            eos similique!
+                        </p>
+                        <br />
+                        <h5>Heading 5.</h5>
+                        <h6>Heading 6.</h6>
+                    </div>
+                </div>
+            </section>
             <section id="services"></section>
             <section id="contact"></section>
 
-            <!-- Temp -->
             <div style="height: 100vh"></div>
-            <!-- Temp -->
 
             <footer>
-                <p class="copyright">Be Marketing &copy <span>2022</span></p>
+                <p class="copyright font:heading font-size:h5">
+                    Be Marketing &copy; <span>2022</span>
+                </p>
             </footer>
         </div>
     </body>
