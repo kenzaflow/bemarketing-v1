@@ -1,13 +1,25 @@
 # Proyecto del sitio web de Be Marketing
 
-### Uso
+## **[Vista previa](http://kenza.ar/bemarketing)**
 
-Para instalar: **`npm install`**
+![package version](https://img.shields.io/github/package-json/v/kenzaflow/bemarketing)
+![commit activity](https://img.shields.io/github/commit-activity/w/kenzaflow/bemarketing)
+![last commit](https://img.shields.io/github/last-commit/kenzaflow/bemarketing)
 
-| Para desarrollo | Construir el build |
-|--|--|
-| **`npm start`** | **`npm run build`** |
+---
 
-Se puede ver el proyecto en [Github Pages](http://kenza.ar/bemarketing)
-| ![enter image description here](https://img.shields.io/github/package-json/v/kenzaflow/bemarketing) | ![enter image description here](https://img.shields.io/node/v/parcel) | ![enter image description here](https://img.shields.io/github/commit-activity/w/kenzaflow/bemarketing) | ![enter image description here](https://img.shields.io/github/last-commit/kenzaflow/bemarketing) | ![enter image description here](https://img.shields.io/github/languages/code-size/kenzaflow/bemarketing) |
-|--|--|--|--|--|
+## Uso
+
+- ### Instalación: **`npm install`**
+
+- ### Servidor local: **`npm start`**
+
+1. Elimina la carpeta *.parcel-cache* y *.dev-build*
+2. Levanta el servidor en *.dev-build* y se mantiene hasta finalizar (Ctrl+C)
+3. Elimina las carpetas
+
+- ### Empaquetar: **`npm run build`**
+
+1. Elimina la carpeta *.parcel-cache* y *build*
+2. Empaqueta todo en *build*
+3. Elimina *.parcel-cache*
