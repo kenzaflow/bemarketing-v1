@@ -29,4 +29,5 @@
 ## Documentación
 
 [Tipografía](./src/assets/scss/base/typography.md)
+
 [Colores](./src/assets/scss/base/colors.md)
