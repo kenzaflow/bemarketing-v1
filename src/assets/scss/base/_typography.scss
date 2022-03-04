@@ -1,34 +1,46 @@
 // Typography.scss
 
+// Order:
+
+/* Fonts declaration */
+/* Family */
+/* Sizes */
+/* Letter-spacing */
+/* Style */
+/* Weight */
+/* <br> as separator */
+
 @font-face {
     font-family: 'fontbmdefault';
     font-weight: normal;
+    font-style: normal;
     src: url("../fonts/bookman_old_style_regular.woff2");
 }
 
 @font-face {
     font-family: 'fontbmdefault';
     font-weight: bold;
+    font-style: normal;
     src: url("../fonts/bookman_old_style_bold.woff2");
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'fontbmheading';
     font-style: normal;
-    src: url("../fonts/montserrat_variable.ttf");
+    font-weight: normal, bold;
+    src: url("../fonts/montserrat_variable.woff2");
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'fontbmheading';
     font-style: italic;
-    src: url("../fonts/montserrat_italic_variable.ttf");
+    font-weight: normal, bold;
+    src: url("../fonts/montserrat_italic_variable.woff2");
 }
 
-html, .font\:default {
+html *, .font\:default {
     font-family:    var(--font-family), serif;
-    * {
-        line-height: calc(var(--font-ratio) * var(--font-ratio));
-    }
+    line-height: calc(var(--font-ratio) * var(--font-ratio));
 }
 
 h1, h2, h3, h4, h5, h6, .font\:heading {

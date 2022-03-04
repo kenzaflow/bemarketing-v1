@@ -13,13 +13,13 @@
 
     // Fonts
 
-    --font-family-heading:      'Montserrat';
+    --font-family-heading:      'fontbmheading';
     --font-family:              'fontbmdefault';
 
     --font-base:                18px;
-    --font-ratio:               calc(4 / 3);
+    --font-ratio:               calc(4 / 3);    // 18px * 1.333 ^ x
 
-    --font-width:               50ch;   // characters per line
+    --font-width:               50ch;           // characters per line
 
     // Palette
 

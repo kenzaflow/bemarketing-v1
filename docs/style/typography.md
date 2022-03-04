@@ -1,15 +1,13 @@
-# Tipografía
+# Tipografía - `_typography.scss`
 
-## Inicio
+## Módulo
 
-En el módulo Typography.scss:
-
-* Se cargan las fuentes
-* Se definen los tamaños, el alto y espaciado y sus respectivos valores por defecto
+* Se cargan las fuentes definidas
+* Se definen los tamaños, el alto y espaciado, junto a sus clases modificadoras.
 
 ## Uso
 
-A continuación se detallan las clases de la siguiente manera: `modificador: valor | valor | etc`
+A continuación se detallan las clases:
 
 `font: heading | default`
 
@@ -21,6 +19,6 @@ Ejemplo: `<p class="font:heading font-size: h4">¡Hola mundo!</p>`
 
 ### El valor `'default'`
 
-En los tamaños de las tipografías, el valor `'default'` toma como referencia al elemento `html`.
+En los tamaños de las tipografías, el valor `'default'` toma como padre al elemento `html`.
 
 Por ejemplo, un elemento `<h3>` con `class='font-size:default'` no tendrá el tamaño que tiene por defecto el elemento `h3`, sino que será como el que tiene el elemento `<p>` o `<span>`

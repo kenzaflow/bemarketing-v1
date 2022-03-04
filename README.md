@@ -1,4 +1,4 @@
-# Proyecto del sitio web de Be Marketing
+# Maqueta del sitio web de Be Marketing
 
 ## **[Vista previa](https://kenza.ar/bemarketing/build/)**
 
@@ -8,26 +8,13 @@
 
 ---
 
-## Uso
-
-**Clonar**, después:
-
-- ### Instalación: **`npm install`**
-
-- ### Servidor local: **`npm start`**
-
-1. Elimina la carpeta *.parcel-cache* y *.dev-build*
-2. Levanta el servidor en *.dev-build* y se mantiene hasta finalizar (Ctrl+C)
-3. Elimina las carpetas
-
-- ### Empaquetar: **`npm run build`**
-
-1. Elimina la carpeta *.parcel-cache* y *build*
-2. Empaqueta todo en *build*
-3. Elimina *.parcel-cache*
-
 ## Documentación
 
-[Tipografía](./src/assets/scss/base/typography.md)
-
-[Colores](./src/assets/scss/base/colors.md)
+- [Cómo instalar y usar](./docs/usage.md)
+- [Fuentes](./docs/assets/fonts.md)
+- [Imágenes](./docs/assets/img.md)
+- [JavaScript](./docs/javascript.md)
+- Estilos
+  - [Variables](./docs/style/vars.md)
+  - [Tipografía](./docs/style/typography.md)
+  - [Colores](./docs/style/colors.md)

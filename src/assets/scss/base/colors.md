@@ -1,3 +1,0 @@
-# Colores
-
-Documentación en progreso

@@ -15,12 +15,20 @@ section, summary, time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
 html {
-    overflow: overlay;
+    box-sizing: border-box;
+}
+
+body {
+    overscroll-behavior: none;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    position: relative;
 }
 
 a {
