@@ -112,3 +112,8 @@ br {
     display: block;
     height: var(--font-base);
 }
+
+b, strong, i, em, mark, small, del, ins, sub, sup {
+    font-family: inherit;
+    font-size: inherit;
+}
