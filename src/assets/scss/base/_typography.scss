@@ -41,6 +41,7 @@
 html *, .font\:default {
     font-family:    var(--font-family), serif;
     line-height: calc(var(--font-ratio) * var(--font-ratio));
+    font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6, .font\:heading {
@@ -59,10 +60,12 @@ h1, h2, h3, h4, h5, h6, .font\:heading {
 
 h1, .font-size\:h1 {
     font-size:      var(--font-size-h1);
+    letter-spacing: -2px;
 }
 
 h2, .font-size\:h2 {
     font-size:      var(--font-size-h2);
+    letter-spacing: -2px;
 }
 
 h3, .font-size\:h3 {
@@ -99,7 +102,7 @@ i, .font-style\:italic {
     font-style: italic;
 }
 
-html, .font-weight\:default {
+html *, .font-weight\:default {
     font-weight: normal;
 }
 

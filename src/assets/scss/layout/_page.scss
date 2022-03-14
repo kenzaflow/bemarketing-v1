@@ -90,7 +90,22 @@ section.home {
 
     .content {
         display: grid;
-        align-content: center;
+        align-content: space-evenly;
+        .title, .subtitle {
+            max-width: 30ch;
+        }
+        .subtitle {
+            text-align: end;
+            place-self: end;
+        }
+        @media (max-width: 768px) {
+            .title, .subtitle {
+                font-size: var(--font-size-h4);
+            }
+            .subtitle {
+                font-size: var(--font-size-h5);
+            }
+        }
     }
 
 }
