@@ -33,7 +33,7 @@ html {
     transition: background-color var(--animation-default);
 
     .content .blank {
-        display: block;
+        display: none;
         grid-column: 1 / 4;
         grid-row: 1;
         transition: background-color var(--animation-default);
@@ -56,6 +56,9 @@ html {
     }
 
     @media (max-width: 768px) {
+        .content .blank {
+            display: block;
+        }
         & {
             grid-template-columns: 0px 1fr 0px;
         }
