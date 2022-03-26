@@ -14,6 +14,8 @@
 - [Fuentes](./docs/assets/fonts.md)
 - [Imágenes](./docs/assets/img.md)
 - [JavaScript](./docs/javascript.md)
+- Componentes
+  - [Topbar](./docs/components/topbar.md)
 - Estilos
   - [Variables](./docs/style/vars.md)
   - [Tipografía](./docs/style/typography.md)

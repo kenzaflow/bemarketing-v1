@@ -18,6 +18,9 @@ En este módulo se definen las variables
 `font-base: 18px`
 > Define el tamaño base del texto y en general (se usa también en otros tamaños).
 
+`font-base: 16px (max-width: 768px)`
+> Define el tamaño base del texto en dispositivos móbiles (se usa también en otros tamaños).
+
 `font-ratio: calc(4 / 3) // 1.333`
 > Define el ratio por el que se multiplica el tamaño base.
 

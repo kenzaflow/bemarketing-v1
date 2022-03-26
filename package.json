@@ -1,6 +1,6 @@
 {
   "name": "bemarketing",
-  "version": "0.0.2",
+  "version": "0.0.24",
   "description": "",
   "source": "src/index.html",
   "scripts": {
@@ -10,7 +10,8 @@
     "make-dev-build": "parcel --dist-dir .dev-build",
     "make-build": "parcel build --dist-dir build --no-source-maps --public-url ./",
     "start": "npm run delete-parcel-cache && npm run delete-dev-build && npm run make-dev-build && npm run delete-dev-build && npm run delete-parcel-cache",
-    "build": "npm run delete-parcel-cache && npm run delete-build && npm run make-build && npm run delete-parcel-cache"
+    "build": "npm run delete-parcel-cache && npm run delete-build && npm run make-build && npm run delete-parcel-cache",
+    "push": "git push"
   },
   "author": "",
   "license": "ISC",
