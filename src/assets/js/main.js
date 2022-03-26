@@ -50,7 +50,7 @@ const initForm = () => {
                     'Oops! There was a problem submitting your form'
             })
     }
-    
+
     form.addEventListener('submit', handleSubmit)
 }
 
@@ -61,6 +61,15 @@ const initForm = () => {
 window.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('is-preload'))
         document.body.classList.remove('is-preload')
+
+    window.addEventListener('click', (event) => {
+        if (
+            document.querySelector('.menu-opener').checked &&
+            event.target !== document.querySelector('.menu-opener')
+        ) {
+            document.querySelector('.menu-opener').checked = false
+        }
+    })
 
     const topBar = document.querySelector('.topbar')
 

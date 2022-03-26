@@ -17,6 +17,12 @@
     --font-family:              'fontbmdefault';
 
     --font-base:                18px;
+    @media (max-width: 768px) {
+        & {
+            --font-base:        16px;
+        }
+    }
+
     --font-ratio:               calc(4 / 3);    // 18px * 1.333 ^ x
 
     --font-width:               50ch;           // characters per line
