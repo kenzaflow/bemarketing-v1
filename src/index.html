@@ -17,7 +17,7 @@
     <script defer type="module" src="./assets/js/main.js"></script>
 </head>
 
-<body outlineNO class="is-preload">
+<body outline="true" class="is-preload">
     <div class="wrapper">
         <header class="topbar">
             <div class="content">
@@ -49,59 +49,52 @@
         </section>
 
         <section id="about" class="about bg-color:fg color:bg">
-            <!-- Swap font -->
 
             <div class="content">
-                <div class="left">
-                    <h1 class="font:default">Heading 1.</h1>
-                    <h2 class="font:default">Heading 2.</h2>
-                    <h3 class="font:default">Heading 3.</h3>
-                    <h4 class="font:default">Heading 4.</h4>
-                    <br />
-                    <p class="font:heading">Paragraph:</p>
-                    <p class="font:heading">
-                        Lorem, ipsum dolor sit amet
-                        <i>consectetur adipisicing</i> elit.
-                        <b>Consectetur sed enim</b> illo rem possimus
-                        veritatis deleniti praesentium debitis eum corporis
-                        sint, cum veniam, est delectus atque iste laborum
-                        eos similique!
-                    </p>
-                    <br />
-                    <h5 class="font:default">Heading 5.</h5>
-                    <h6 class="font:default">Heading 6.</h6>
-                </div>
-                <div class="right">
-                    <h1>Heading 1.</h1>
-                    <h2>Heading 2.</h2>
-                    <h3>Heading 3.</h3>
-                    <h4>Heading 4.</h4>
-                    <br />
-                    <p>Paragraph:</p>
-                    <p>
-                        Lorem, ipsum dolor sit amet
-                        <i>consectetur adipisicing</i> elit.
-                        <b>Consectetur sed enim</b> illo rem possimus
-                        veritatis deleniti praesentium debitis eum corporis
-                        sint, cum veniam, est delectus atque iste laborum
-                        eos similique!
-                    </p>
-                    <br />
-                    <h5>Heading 5.</h5>
-                    <h6>Heading 6.</h6>
-                </div>
+                <h1>Sobre BM</h1>
+                <p class="font:heading">
+                    Be Marketing es una startup que surge en 2018 por la pasión y necesidad de crecimiento del equipo,
+                    que en sus inicios funcionó como una consultora externa.
+                </p>
+                <br>
+                <p class="font:heading">
+                    Los miembros del staff están directamente involucrados con el mundo del marketing digital, tanto en
+                    su desempeño laboral diario, como en el ámbito educativo al dictar cursos en reconocidas academias.
+                </p>
+                <br>
+                <p class="font:heading">
+                    Gracias a su implementación, profesionalismo y dedicación, Be Marketing trabaja con marcas
+                    reconocidas a nivel internacional y emprendedores locales.
+                </p>
+                <br>
+                <p class="font:heading">
+                    No sigue lineamientos estructurados ni bases preestablecidas, logrando así una vista amplia y
+                    personalizada de cada cliente, y una variedad de herramientas para experimentar y alcanzar
+                    objetivos.
+                </p>
+                <br>
+                <p class="font:heading color:accent">
+                    Be no es una agencia de trabajo, es un aliado para tu trabajo.
+                </p>
             </div>
         </section>
-        <section id="services" class="services"></section>
+        <section id="services" class="services" style="height: 100vh;"></section>
+
         <section id="contact" class="contact">
-            <form id="my-form" action="https://formspree.io/f/xwkybzpn" method="POST">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" />
-                <label for="message">Message:</label>
-                <input type="text" name="message" id="message" />
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
-            </form>
+
+            <div class="content">
+                <form id="formspree" action="https://formspree.io/f/xwkybzpn" method="POST">
+                    <input type="hidden" name="_language" value="es" />
+                    <input value="test" required type="name" name="name" id="name" placeholder="Nombre" />
+                    <input value="test@example.com" required type="email" name="email" id="email" placeholder="Email" />
+                    <input value="testing message" required type="text" name="message" id="message"
+                        placeholder="Mensaje" />
+
+                    <button type="submit" id="formspreeSend">Enviar</button>
+                </form>
+            </div>
+
+
         </section>
 
         <div style="height: 100vh"></div>

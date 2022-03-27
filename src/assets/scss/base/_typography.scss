@@ -114,6 +114,9 @@ br {
     content: " ";
     display: block;
     height: var(--font-base);
+    &.size\:2 {
+        height: calc(var(--font-base) * 2);
+    }
 }
 
 b, strong, i, em, mark, small, del, ins, sub, sup {

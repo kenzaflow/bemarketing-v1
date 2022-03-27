@@ -54,6 +54,12 @@ html {
             }
         }
     }
+    .viewingStatus {
+        background-color: var(--palette-background);
+        .content .logo {
+            pointer-events: none;
+        }
+    }
 
     @media (max-width: 768px) {
         .content .blank {
@@ -108,6 +114,10 @@ html {
     /* Size */
     padding: 0 calc(var(--font-base) * 2);
     letter-spacing: -0.2rem;
+
+    &.viewingStatus {
+        pointer-events: none;
+    }
 }
 
 .topbar .content .navbar {
@@ -124,101 +134,115 @@ html {
     }
 }
 
+@mixin content-mobile {
+    .content .menu-opener {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        cursor: pointer;
+        grid-column: 3;
+        grid-row: 1;
+        width: calc(var(--font-base) * 4);
+        transition: background-color var(--animation-default);
+        
+        &.lines {
+            pointer-events: none;
+            display: grid;
+            place-items: center;
+
+            .line, .line::before, .line::after {
+                width: 24px;
+                height: 4px;
+                background-color: var(--palette-foreground);
+                border-radius: 8px;
+                position: relative;
+                transition: none var(--animation-default);
+                transition-property: background-color, transform;
+            }
+            .line::before, .line::after {
+                content: '';
+                background-color: var(--palette-foreground);
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .line::before {
+                transform: translateY(-200%);
+            }
+            .line::after {
+                transform: translateY(100%);
+            }
+        }
+
+        /* &:hover {
+            & ~ .lines {
+                .line, .line::before, .line::after {
+                    background-color: var(--palette-accent);
+                }
+            }
+        } */
+
+        /* background-color: rgba(255, 0, 0, 0.24); */
+        &:checked {
+            /* background-color: rgba(255, 0, 0, 0.5); */
+            & ~ .navbar {
+                /* display: grid; */
+                max-height: 100%;
+                padding: calc(var(--font-base) * 2.5) 0;
+                position: relative;
+            }
+            & ~ .blank {
+                display: block;
+            }
+            
+            & ~ .blank, & ~ .navbar {
+                background-color: var(--palette-background);
+            }
+            & ~ .lines {
+                .line {
+                    background-color: transparent;}
+                .line::before {
+                    transform: rotate(45deg);
+                    position: absolute;}
+                .line::after { 
+                    transform: rotate(-45deg);
+                    position: absolute;}
+            }
+        }
+        
+    }
+    .content .navbar {
+        display: grid;
+        grid-column: 1 / 4;
+        justify-content: end;
+        grid-row: 2;
+        grid-auto-flow: row;
+        gap: calc(var(--font-base) * 2);
+        padding: 0 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: none var(--animation-default);
+        transition-property: max-height, padding, background-color;
+        height: auto;
+        background-color: transparent;
+    }
+}
+
 .topbar {
     .menu-opener { display: none; }
     @media (max-width: 768px) {
-        .content .menu-opener {
-            border: none;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            display: block;
-            cursor: pointer;
-            grid-column: 3;
-            grid-row: 1;
-            width: calc(var(--font-base) * 4);
-            transition: background-color var(--animation-default);
-            
-            &.lines {
-                pointer-events: none;
-                display: grid;
-                place-items: center;
+        @include content-mobile
+    }
+}
 
-                .line, .line::before, .line::after {
-                    width: 24px;
-                    height: 4px;
-                    background-color: var(--palette-foreground);
-                    border-radius: 8px;
-                    position: relative;
-                    transition: none var(--animation-default);
-                    transition-property: background-color, transform;
-                }
-                .line::before, .line::after {
-                    content: '';
-                    background-color: var(--palette-foreground);
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-                .line::before {
-                    transform: translateY(-200%);
-                }
-                .line::after {
-                    transform: translateY(100%);
-                }
-            }
-
-            /* &:hover {
-                & ~ .lines {
-                    .line, .line::before, .line::after {
-                        background-color: var(--palette-accent);
-                    }
-                }
-            } */
-
-            /* background-color: rgba(255, 0, 0, 0.24); */
-            &:checked {
-                /* background-color: rgba(255, 0, 0, 0.5); */
-                & ~ .navbar {
-                    /* display: grid; */
-                    max-height: 100%;
-                    padding: calc(var(--font-base) * 2.5) 0;
-                    position: relative;
-                }
-                & ~ .blank {
-                    display: block;
-                }
-                
-                & ~ .blank, & ~ .navbar {
-                    background-color: var(--palette-background);
-                }
-                & ~ .lines {
-                    .line {
-                        background-color: transparent;}
-                    .line::before {
-                        transform: rotate(45deg);
-                        position: absolute;}
-                    .line::after { 
-                        transform: rotate(-45deg);
-                        position: absolute;}
-                }
-            }
-            
+.wrapper.viewingStatus {
+    .topbar {
+        .link::after {
+            display: none;
         }
-        .content .navbar {
-            display: grid;
-            grid-column: 1 / 4;
-            justify-content: end;
-            grid-row: 2;
-            grid-auto-flow: row;
-            gap: calc(var(--font-base) * 2);
-            padding: 0 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: none var(--animation-default);
-            transition-property: max-height, padding, background-color;
-            height: auto;
-            background-color: transparent;
-        }
-    }   
+        background-color: var(--palette-background);
+        @include content-mobile
+    }
 }
