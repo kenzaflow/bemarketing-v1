@@ -22,13 +22,13 @@ const handleClose = () => {
         .removeEventListener('click', handleClose)
 }
 
-function initStatus() {
+function initStatus({ title = '', text = '' }) {
     section.id = 'statusForm'
     section.classList.add('statusForm')
     section.innerHTML = `<div class="content">
-                            <p id="statusTitle" class="font-size:h2 font:heading"></p>
+                            <p id="statusTitle" class="font-size:h2 font:heading">${title}</p>
                             <br class="size:2">
-                            <p id="statusText" class="font-size:h4 font:heading"></p>
+                            <p id="statusText" class="font-size:h4 font:heading">${text}</p>
                         </div>`
     document.querySelector('.wrapper').appendChild(section)
     document.querySelector('.wrapper').classList.add('viewingStatus')
@@ -47,13 +47,12 @@ export function initForm() {
     async function handleSubmit(event) {
         event.preventDefault()
 
-        initStatus()
+        initStatus({ title: 'Enviando...' })
 
         const data = new FormData(event.target)
 
         fetch(event.target.action, {
             method: form.method,
-            method: 'GET',
             body: data,
             headers: {
                 Accept: 'application/json',

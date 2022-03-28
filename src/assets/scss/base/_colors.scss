@@ -15,6 +15,9 @@
 .color\:accent {
     color: var(--palette-accent);
 }
+.color\:accent-darker {
+    color: var(--palette-accent-darker);
+}
 
 .bg-color\:bg {
     background-color: var(--palette-background);
@@ -30,4 +33,7 @@
 }
 .bg-color\:accent {
     background-color: var(--palette-accent);
+}
+.bg-color\:accent-darker {
+    background-color: var(--palette-accent-darker);
 }

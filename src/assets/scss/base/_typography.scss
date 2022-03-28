@@ -10,6 +10,8 @@
 /* Weight */
 /* <br> as separator */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 @font-face {
     font-family: 'fontbmdefault';
     font-weight: normal;
@@ -55,7 +57,7 @@ h1, h2, h3, h4, h5, h6, .font\:heading {
     --font-size-h4:      calc(var(--font-base) * var(--font-ratio)); 
     --font-size-default: var(--font-base); 
     --font-size-h5:      calc(var(--font-base) * calc(var(--font-ratio) * 0.7)); 
-    --font-size-h6:      calc(var(--font-base) * calc(var(--font-ratio) * 0.6)); 
+    --font-size-h6:      calc(var(--font-base) * calc(var(--font-ratio) * 0.6));
 }
 
 h1, .font-size\:h1 {
@@ -102,12 +104,16 @@ i, .font-style\:italic {
     font-style: italic;
 }
 
+.font-weight\:light {
+    font-weight: 300;
+}
+
 html *, .font-weight\:default {
-    font-weight: normal;
+    font-weight: 300;
 }
 
 b, strong, .font-weight\:bold {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 br {
