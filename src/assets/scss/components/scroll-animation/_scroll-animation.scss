@@ -1,8 +1,14 @@
 .scroll-animation {
-    position: absolute;
+    
     width: calc(var(--font-base) * 2);
     height: calc(var(--font-base) * 3);
-    bottom: calc(var(--font-base) * 3);
+    
+    place-self: center;
+
+    @media (min-height: 768px) {
+        position: absolute;
+        bottom: calc(var(--font-base) * 3);
+    }
 
     opacity: 0.85;
     transition: opacity var(--animation-default);
@@ -69,6 +75,7 @@
     }
 }
 
-body.has-scroll .scroll-animation {
+body.has-scroll .scroll-animation,
+body.no-scroll-animation .scroll-animation {
     opacity: 0;
 }

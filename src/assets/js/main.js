@@ -33,8 +33,10 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener(
         'scroll',
         debounce((e) => {
-            if (window.scrollY === 0) document.body.classList.remove('has-scroll')
-            if (window.scrollY > 0) document.body.classList.add('has-scroll')
+            if (window.scrollY === 0)
+                document.body.classList.remove('has-scroll')
+            if (window.scrollY > 0)
+                document.body.classList.add('has-scroll', 'no-scroll-animation')
         }, 10)
     )
 
