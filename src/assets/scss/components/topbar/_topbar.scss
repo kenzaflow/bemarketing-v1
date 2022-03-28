@@ -11,6 +11,8 @@ html {
     scroll-padding-top: var(--topbar-size);
 }
 
+
+
 .topbar {
 
     /* Style */
@@ -40,20 +42,7 @@ html {
         background-color: transparent;
         pointer-events: none;
     }
-    &.has-scroll {
-        @media (max-width: 768px) {
-            .content {
-                .blank {
-                    background-color: var(--palette-background);
-                }
-            }
-        }
-        @media (min-width: 769px) {
-            & {
-                background-color: var(--palette-background);
-            }
-        }
-    }
+
     .viewingStatus {
         background-color: var(--palette-background);
         .content .logo {
@@ -71,6 +60,8 @@ html {
     }
 
 }
+
+
 
 .topbar .content {
 
@@ -133,6 +124,8 @@ html {
         padding: 0 calc(var(--font-base) * 2);
     }
 }
+
+
 
 @mixin content-mobile {
     .content .menu-opener {
@@ -254,5 +247,21 @@ html {
         }
         background-color: var(--palette-background);
         @include content-mobile
+    }
+}
+
+
+body.has-scroll {
+    @media (max-width: 768px) {
+        .topbar .content {
+            .blank {
+                background-color: var(--palette-background);
+            }
+        }
+    }
+    @media (min-width: 769px) {
+        .topbar {
+            background-color: var(--palette-background);
+        }
     }
 }

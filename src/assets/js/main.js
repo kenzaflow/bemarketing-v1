@@ -30,13 +30,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    const topBar = document.querySelector('.topbar')
-
     window.addEventListener(
         'scroll',
         debounce((e) => {
-            if (window.scrollY === 0) topBar.classList.remove('has-scroll')
-            if (window.scrollY > 0) topBar.classList.add('has-scroll')
+            if (window.scrollY === 0) document.body.classList.remove('has-scroll')
+            if (window.scrollY > 0) document.body.classList.add('has-scroll')
         }, 10)
     )
 
