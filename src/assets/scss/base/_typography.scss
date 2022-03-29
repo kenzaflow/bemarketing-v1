@@ -13,36 +13,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-    font-family: 'fontbmdefault';
+    font-family: 'Bookman Old Style';
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/bookman_old_style_regular.woff2");
+    src: url("../fonts/bookman_old_style_regular.woff");
 }
 
 @font-face {
-    font-family: 'fontbmdefault';
+    font-family: 'Bookman Old Style';
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/bookman_old_style_bold.woff2");
+    src: url("../fonts/bookman_old_style_bold.woff");
 }
 
-@font-face {
+/* @font-face {
     font-family: 'fontbmheading';
     font-style: normal;
     font-weight: normal, bold;
     font-display: swap;
     src: url("../fonts/montserrat_variable.woff2");
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: 'fontbmheading';
     font-style: italic;
     font-weight: normal, bold;
     font-display: swap;
     src: url("../fonts/montserrat_italic_variable.woff2");
-}
+} */
 
 html *, .font\:default {
     font-family:    var(--font-family), serif;
