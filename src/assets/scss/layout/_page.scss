@@ -173,13 +173,56 @@ section.home {
 section.about {
     .content {
         display: grid;
-        /* grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size-max-width) / 2 - calc(var(--font-base) * 2))), 1fr)); */
-        /* .left, .right {
-            width: 100%;
-        } */
         min-height: calc(100vh - var(--topbar-size));
 
         align-content: center;
     }
-    
+}
+
+section.team {
+
+    min-height: auto;
+    height: auto;
+
+    @media (min-width: 768px) {
+        min-height: 100vh;
+    }
+
+    .content {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        .body {
+            display: grid;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            grid-auto-flow: column;
+
+            height: 216px;
+            gap: calc(var(--font-base) * 1);
+
+            @media (min-width: 425px) {
+                height: 308px;
+            }
+            @media (min-width: 768px) {
+                height: 400px;
+                gap: calc(var(--font-base) * 2);
+            }
+
+            .active {
+                scroll-snap-type: none;
+            }
+
+            .person {
+                scroll-snap-stop: always;
+                height: 90%;
+                aspect-ratio: 4 / 3;
+                width: auto;
+                background-color: hsla(0, 0%, 98%, 0.1);
+                scroll-snap-align: center;
+                scroll-margin: var(--font-base);
+                border-radius: 5px;
+            }
+        }
+    }
 }

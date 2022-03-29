@@ -1,3 +1,4 @@
+import { initScroll } from './modules/scroll'
 import { initForm } from './modules/form'
 import { debounce } from './modules/functions'
 
@@ -41,4 +42,5 @@ window.addEventListener('DOMContentLoaded', () => {
     )
 
     initForm()
+    initScroll()
 })
