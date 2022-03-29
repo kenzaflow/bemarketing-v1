@@ -197,10 +197,17 @@ section.team {
         .body {
             width: 100%;
             display: grid;
-            overflow-x: scroll;
+            overflow: hidden;
+            overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             grid-auto-flow: column;
+
+            overscroll-behavior-x: contain;
+
+            *, & > * {
+                user-select: none;
+            }
 
             height: 216px;
             /* gap: calc(var(--font-base) * 1); */
@@ -229,12 +236,15 @@ section.team {
                 aspect-ratio: 4 / 3;
                 width: auto;
                 background-color: hsla(0, 0%, 98%, 0.05);
-                /* background-color: transparent; */
+                background-color: transparent;
                 transition: background-color var(--animation-default);
                 scroll-snap-align: center;
                 border-radius: 5px;
 
                 cursor: w-resize;
+                & > * {
+                    cursor: default;
+                }
 
                 display: grid;
                 place-items: center;
@@ -303,19 +313,22 @@ section.team {
                         }
                     }
                 }
-                &:hover {
+                &:hover, &:focus-within, &:focus, &:active {
                     background-color: var(--palette-accent);
                     .info {
                         opacity: 0;
-                        &.hover {
-                            opacity: 1;
-                            .icon:hover {
-                                transform: scale(1.25);
-                            }
+                    }
+                    .info.hover {
+                        opacity: 1;
+                        .icon:hover {
+                            transform: scale(1.25);
                         }
                     }
                 }
             }
+        }
+        .next-person, .prev-person {
+            background-color: red;
         }
     }
 
