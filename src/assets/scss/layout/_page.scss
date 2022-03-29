@@ -213,10 +213,14 @@ section.team, section.services {
 }
 
 section.services {
+    background-color: #cccccc;
     .content {
         .cards {
             .card {
             }
         }
     }
+}
+section.contact {
+    // background: linear-gradient(90deg, var(--palette-foreground) 0%, var(--palette-foreground) 50%, var(--palette-background) 50%, var(--palette-background) 100%);
 }
