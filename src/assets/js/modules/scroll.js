@@ -1,25 +1,54 @@
-const parent = document.querySelector('.team .body')
-const children = parent.querySelector('.person')
+const parent = document.querySelectorAll('.cards.scroll-snap-parent')
+/* const children = parent.querySelector('.team .cards .card') */
+
+const types = ['mousedown', 'mouseup', 'mouseleave', 'mousemove']
+
+export function initScroll() {
+    parent.forEach((element) => {
+        types.forEach((type) => {
+            element.addEventListener(type, (event) =>
+                handleMouseEvent(event, type, element)
+            )
+            console.log(element)
+        })
+    })
+
+    /* document.querySelector('.next-person').onclick = (event) => {
+        handleNavegation(1)
+    }
+    document.querySelector('.prev-person').onclick = (event) => {
+        handleNavegation(-1)
+    } */
+}
 
 let startX
 let scrollLeft
 let isDown
 
-export function initScroll() {
-    parent.addEventListener('mousedown', (e) => mouseIsDown(e))
-    parent.addEventListener('mouseup', (e) => mouseUp(e))
-    parent.addEventListener('mouseleave', (e) => mouseLeave(e))
-    parent.addEventListener('mousemove', (e) => mouseMove(e))
-
-    document.querySelector('.next-person').onclick = (event) => {
-        handleNavegation(1)
+function handleMouseEvent(event, type, element) {
+    if (type === 'mousedown') {
+        isDown = true
+        startX = event.pageX - element.offsetTop
+        scrollLeft = element.scrollLeft
     }
-    document.querySelector('.prev-person').onclick = (event) => {
-        handleNavegation(-1)
+    if (type === 'mouseleave' || type === 'mouseup') {
+        isDown = false
+        element.classList.remove('active')
+    }
+    if (type === 'mousemove') {
+        if (isDown) {
+            //Move horizontally
+            const x = event.pageX - element.offsetTop
+            const walkX = (x - startX) * 2
+            element.scrollLeft = scrollLeft - walkX
+            element.classList.add('active')
+        } else {
+            element.classList.remove('active')
+        }
     }
 }
 
-const childrenSize = () => {
+/* const childrenSize = () => {
     return (
         children.clientWidth +
         Number(
@@ -30,37 +59,12 @@ const childrenSize = () => {
         ) *
             2
     )
-}
+} */
 
-function handleNavegation(x) {
+/* function handleNavegation(x) {
     if (x > 0) {
         parent.scrollBy(childrenSize(), 0)
     } else {
         parent.scrollBy(-childrenSize(), 0)
     }
-}
-
-function mouseIsDown(e) {
-    isDown = true
-    startX = e.pageX - parent.offsetTop
-    scrollLeft = parent.scrollLeft
-}
-function mouseUp(e) {
-    isDown = false
-    parent.classList.remove('active')
-}
-function mouseLeave(e) {
-    isDown = false
-    parent.classList.remove('active')
-}
-function mouseMove(e) {
-    if (isDown) {
-        //Move horizontally
-        const x = e.pageX - parent.offsetTop
-        const walkX = (x - startX) * 2
-        parent.scrollLeft = scrollLeft - walkX
-        parent.classList.add('active')
-    } else {
-        parent.classList.remove('active')
-    }
-}
+} */
