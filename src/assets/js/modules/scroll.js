@@ -20,17 +20,14 @@ function mouseIsDown(e) {
     isDown = true
     startX = e.pageX - parent.offsetTop
     scrollLeft = parent.scrollLeft
-    parent.classList.add('active')
 }
 function mouseUp(e) {
     isDown = false
-    parent.classList.add('active')
+    parent.classList.remove('active')
 }
 function mouseLeave(e) {
     isDown = false
-    setTimeout(() => {
-        parent.classList.remove('active')
-    }, 10)
+    parent.classList.remove('active')
 }
 function mouseMove(e) {
     if (isDown) {
@@ -40,5 +37,7 @@ function mouseMove(e) {
         const walkX = (x - startX) * 2
         parent.scrollLeft = scrollLeft - walkX
         parent.classList.add('active')
+    } else {
+        parent.classList.remove('active')
     }
 }
