@@ -4,7 +4,7 @@
     left: 0; right: 0;
     bottom: 0;
     transform-origin: center bottom;
-    height: 0.1rem;
+    height: calc(var(--font-base) * 0.1);
     background-color: var(--palette-accent);
     transition: transform var(--animation-default);
 }

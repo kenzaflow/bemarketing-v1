@@ -100,12 +100,12 @@
                         <div class="picture"></div>
                         <div class="info">
                             <p class="text">Emanuel Acosta</p>
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <div class="info hover">
                             <p class="text">Fundador / CEO</p>
                             <a href="https://www.linkedin.com/in/emanuel-acosta-marketer/" target="_blank"
-                                rel="noopener noreferrer"><img class="icon social linkedin"
+                                rel="noopener noreferrer"><img loading="lazy" class="icon social linkedin"
                                     src="./assets/img/svg/linkedin.svg" alt="linkedin"></a>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                         <div class="picture"></div>
                         <div class="info">
                             <p class="text">Germán Bonomo</p>
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <div class="info hover">
                             <p class="text">CMO</p>
@@ -123,12 +123,12 @@
                         <div class="picture"></div>
                         <div class="info">
                             <p class="text">Eugenia Blanchet</p>
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <div class="info hover">
                             <p class="text">Social Media Manager</p>
                             <a href="https://www.linkedin.com/in/eugenia-blanchet-8120b4220/" target="_blank"
-                                rel="noopener noreferrer"><img class="icon social linkedin"
+                                rel="noopener noreferrer"><img loading="lazy" class="icon social linkedin"
                                     src="./assets/img/svg/linkedin.svg" alt="linkedin"></a>
                         </div>
                     </div>
@@ -136,12 +136,12 @@
                         <div class="picture"></div>
                         <div class="info">
                             <p class="text">Tomás Adragna</p>
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <div class="info hover">
                             <p class="text">Diseñador Gráfico</p>
                             <a href="https://www.linkedin.com/in/tomas-adragna-151253207/" target="_blank"
-                                rel="noopener noreferrer"><img class="icon social linkedin"
+                                rel="noopener noreferrer"><img loading="lazy" class="icon social linkedin"
                                     src="./assets/img/svg/linkedin.svg" alt="linkedin"></a>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                     <div class="card simple">
                         <p class="title font:heading">Gestión integral de redes sociales</p>
                         <div class="info">
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <ul class="text">
                             <li>
@@ -179,7 +179,7 @@
                     <div class="card simple">
                         <p class="title font:heading">Pauta Publicitaria en Facebook Ads</p>
                         <div class="info">
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <ul class="text">
                             <li>
@@ -198,7 +198,7 @@
                     <div class="card simple">
                         <p class="title font:heading">Pauta Publicitaria en Google Ads</p>
                         <div class="info">
-                            <img class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
+                            <img loading="lazy" class="icon eye" src="./assets/img/svg/eye.svg" alt="Ver información">
                         </div>
                         <ul class="text">
                             <li>
@@ -218,18 +218,42 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact color:bg bg-color:fg">
 
             <div class="content">
                 <a href="#contact" class="title font:heading">Charlemos</a>
-                <form id="formspree" action="https://formspree.io/f/xwkybzpn" method="POST">
-                    <input type="hidden" name="_language" value="es" />
-                    <input required type="name" name="name" id="name" placeholder="Nombre" />
-                    <input required type="email" name="email" id="email" placeholder="Email" />
-                    <input required type="text" name="message" id="message" placeholder="Mensaje" />
-
-                    <button type="submit" id="formspreeSend">Enviar</button>
+                <p class="description">Para liberar todo el potencial que tu emprendimiento tiene, queremos asesorarte
+                    sin cargo. Te invitamos a contactar.</p>
+                <p class="short-description">¡Hoy es tu momento de crecer!</p>
+                <div class="direct">
+                    <a class="link-alt whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" src="./assets/img/svg/whatsapp.svg" alt="Link a WhatsApp">
+                        <span>+54 9 11 6836 5683</span>
+                    </a>
+                    <a class="link-alt email" href="#" target="_blank" rel="noopener noreferrer">
+                        <p>info@bemarketing.company</p>
+                    </a>
+                </div>
+                <form class="formspree" id="formspree" action="https://formspree.io/f/xwkybzpn" method="POST">
+                    <input class="input text" type="hidden" name="_language" value="es" />
+                    <input class="input text" required type="name" name="name" id="name" placeholder="Nombre" />
+                    <input class="input text" required type="email" name="email" id="email" placeholder="Email" />
+                    <textarea class="input text textarea" required type="text" name="message" id="message" rows=3
+                        placeholder="Escribe tu mensaje"></textarea>
+                    <button class="input button padding" type="submit" id="formspreeSend"><span>Enviar</span></button>
                 </form>
+                <div class="socials">
+                    <a class="link-alt linkedin" href="#" target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" style="filter: invert(1);" src="./assets/img/svg/linkedin.svg"
+                            alt="Link a Linkedin">
+                    </a>
+                    <a class="link-alt facebook" href="#" target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" src="./assets/img/svg/facebook.svg" alt="Link a Facebook">
+                    </a>
+                    <a class="link-alt instagram" href="#" target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" src="./assets/img/svg/instagram.svg" alt="Link a Instagram">
+                    </a>
+                </div>
             </div>
 
         </section>

@@ -9,7 +9,6 @@ export function initScroll() {
             element.addEventListener(type, (event) =>
                 handleMouseEvent(event, type, element)
             )
-            console.log(element)
         })
     })
 

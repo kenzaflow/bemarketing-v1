@@ -1,0 +1,50 @@
+.input {
+    font-family: var(--font-family-heading);
+    height: calc(var(--font-base) * 2.25);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    max-width: 472px;
+    &.text {
+        background-color: var(--palette-foreground);
+        color: var(--palette-background);
+        font-weight: 400;
+        cursor: text;
+        padding: 0 calc(var(--font-base) * 0.75);
+        &.textarea {
+            min-height: calc(var(--font-base) * 2.25);
+            height: auto;
+        }
+    }
+    &.button {
+        cursor: pointer;
+        & > span {
+            font-weight: 600;
+            font-size: var(--font-base);
+            filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.4));
+        }
+        &.padding {
+            width: fit-content;
+            padding: 0 calc(var(--font-base) * 4);
+        }
+
+        transition: none var(--animation-default);
+        transition-property: background-color, box-shadow, color;
+        // Style
+        background-color: var(--palette-accent);
+        & > span {
+            color: var(--palette-foreground);
+            transition: transform var(--animation-default);
+            display: inline-block;
+        }
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        &:active , &:focus, &:focus-within, &:target {
+            background-color: var(--palette-accent);
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25), inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+            & > span {
+                color: var(--palette-foreground);
+                transform: translateY(2px);
+            }
+        }
+    }
+}

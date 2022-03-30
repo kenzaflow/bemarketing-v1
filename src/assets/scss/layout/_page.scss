@@ -189,11 +189,18 @@ section.team, section.services {
 
     min-height: auto;
     height: auto;
+    max-width: unset;
 
     .content {
         display: grid;
         grid-template-rows: auto 1fr;
         grid-template-columns: 1fr;
+        max-width: var(--size-max-width-large);
+        & > .title {
+            width: 100%;
+            max-width: var(--size-max-width);
+            justify-self: center;
+        }
     }
 
     @media (min-width: 768px) and (min-height: 768px) {
@@ -222,5 +229,56 @@ section.services {
     }
 }
 section.contact {
-    // background: linear-gradient(90deg, var(--palette-foreground) 0%, var(--palette-foreground) 50%, var(--palette-background) 50%, var(--palette-background) 100%);
+    @media (min-width: 1024px) {
+        background: linear-gradient(90deg, var(--palette-foreground) 0%, var(--palette-foreground) 50%, var(--palette-background) 50%, var(--palette-background) 100%);
+    }
+     
+    * {font-family: var(--font-family-heading);}
+
+    .content {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "title"
+        "description"
+        "short-description"
+        "formspree"
+        "direct"
+        "socials";
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "title title"
+            "description formspree"
+            "short-description formspree"
+            "direct socials";
+        }
+
+        .title { grid-area: title; }
+        .description { grid-area: description; }
+        .short-description { grid-area: short-description; }
+        .direct { grid-area: direct; }
+        .formspree { grid-area: formspree; }
+        .socials { grid-area: socials; }
+
+        grid-template-rows: repeat(4, auto);
+
+        img {
+            width: 24px;
+            height: auto;
+        }
+
+        .formspree {
+            display: grid;
+            width: 100%;
+            height: 100%;
+        }
+
+        .socials {
+            filter: invert(1);
+        }
+    }
+    
 }

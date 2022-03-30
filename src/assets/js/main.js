@@ -6,15 +6,29 @@ import { debounce } from './modules/functions'
 
 /* Main.js */
 
+function startDebugging() {
+    if (localStorage.getItem('outline') !== null) {
+        document.body.setAttribute('outline', '')
+    }
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'o' && event.ctrlKey) {
+            event.preventDefault()
+            document.body.toggleAttribute('outline')
+            if (document.body.hasAttribute('outline')) {
+                localStorage.setItem('outline', '')
+            } else {
+                localStorage.removeItem('outline')
+            }
+        }
+    })
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('is-preload'))
         document.body.classList.remove('is-preload')
 
-    window.addEventListener('keydown', (event) => {
-        if (event.key === 'o') {
-            document.body.toggleAttribute('outline')
-        }
-    })
+    startDebugging()
 
     window.addEventListener('click', (event) => {
         if (
