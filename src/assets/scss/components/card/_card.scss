@@ -108,7 +108,7 @@
                 font-size: calc(var(--font-base) * 1.25);
             }
             span {
-                font-weight: 300;
+                font-weight: 400;
             }
             &::marker {
                 font-size: calc(var(--font-base) * 0.5);
@@ -174,7 +174,7 @@
             }
             .text {
                 opacity: 0;
-                padding: calc(var(--font-base) * 2) var(--font-base);
+                padding: var(--font-base);
                 @media (min-width: 768px) {
                     padding: calc(var(--font-base) * 1.2);
                 }
@@ -186,10 +186,14 @@
             }
         }
         &:hover, &:focus-within, &:focus, &:active &.active {
-            background-color: var(--palette-accent);
+            background-color: var(--palette-accent-darker);
             &.simple {
                 background-color: var(--palette-foreground);
                 color: var(--palette-background);
+                cursor: w-resize;
+                * {
+                    cursor: inherit;
+                }
             }
             .title {
                 opacity: 0;
@@ -203,7 +207,7 @@
             .info.hover {
                 opacity: 1;
                 .icon:hover {
-                    transform: scale(1.25);
+                    /* transform: scale(1.25); */
                 }
             }
         }

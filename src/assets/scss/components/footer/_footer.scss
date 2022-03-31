@@ -1,14 +1,20 @@
 footer {
-    /* Size */
-    height: 3.5rem;
+    height: var(--topbar-size);
 
     /* Grid */
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: 24px repeat(2, 1fr) 24px;
-}
-
-footer .copyright {
-    grid-column: 3;
+    grid-template-columns: var(--font-base) repeat(2, auto) var(--font-base);
+    a {
+        font-size: calc(var(--font-base) * 1.6);
+        grid-column: 2;
+        letter-spacing: calc(var(--font-base) * -0.14);
+        font-weight: 300;
+    }
+    .copyright {
+        font-size: calc(var(--font-base) * 0.9);
+        font-weight: 300;
+        grid-column: 3;
+    }
 }

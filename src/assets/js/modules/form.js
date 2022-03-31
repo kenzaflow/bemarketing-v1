@@ -28,7 +28,7 @@ function initStatus({ title = '', text = '' }) {
     section.innerHTML = `<div class="content">
                             <p id="statusTitle" class="font-size:h2 font:heading">${title}</p>
                             <br class="size:2">
-                            <p id="statusText" class="font-size:h4 font:heading">${text}</p>
+                            <p id="statusText" class="font-size:h4 font:heading color:accent">${text}</p>
                         </div>`
     document.querySelector('.wrapper').appendChild(section)
     document.querySelector('.wrapper').classList.add('viewingStatus')

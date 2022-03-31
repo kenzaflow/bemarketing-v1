@@ -1,27 +1,28 @@
 .input {
     font-family: var(--font-family-heading);
-    height: calc(var(--font-base) * 2.25);
+    min-height: calc(var(--font-base) * 2.25);
+    font-size: calc(var(--font-base) * 0.9);
     border: none;
     outline: none;
     border-radius: 5px;
-    max-width: 472px;
+    /* max-width: 472px; */
     &.text {
         background-color: var(--palette-foreground);
         color: var(--palette-background);
-        font-weight: 400;
         cursor: text;
-        padding: 0 calc(var(--font-base) * 0.75);
+        padding: calc(var(--font-base) * 0.75);
+        font-weight: 500;
         &.textarea {
-            min-height: calc(var(--font-base) * 2.25);
-            height: auto;
+            resize: none;
         }
     }
     &.button {
+        height: calc(var(--font-base) * 2.75);
         cursor: pointer;
         & > span {
             font-weight: 600;
             font-size: var(--font-base);
-            filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.4));
+            filter: drop-shadow(0px 4px 8px hsla(0, 0%, 0%, 0.8));
         }
         &.padding {
             width: fit-content;
@@ -34,16 +35,25 @@
         background-color: var(--palette-accent);
         & > span {
             color: var(--palette-foreground);
-            transition: transform var(--animation-default);
+            transition: none var(--animation-default);
+            transition-property: transform, color, filter;
             display: inline-block;
         }
         box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        &:hover {
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25);
+            & > span {
+                color: var(--palette-foreground);
+                filter: drop-shadow(0px 6px 12px hsla(0, 0%, 0%, 1));
+            }
+        }
         &:active , &:focus, &:focus-within, &:target {
-            background-color: var(--palette-accent);
-            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25), inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+            background-color: var(--palette-accent-darker);
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
             & > span {
                 color: var(--palette-foreground);
                 transform: translateY(2px);
+                filter: drop-shadow(0px 0px 6px hsla(0, 0%, 0%, 0.7));
             }
         }
     }

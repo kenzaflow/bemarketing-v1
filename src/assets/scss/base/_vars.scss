@@ -34,7 +34,7 @@
     --palette-foreground:     hsl(0, 0%, 98%);
     --palette-gray-dark:        #{color.scale(#fafafa, $lightness: -80%)};
     --palette-gray-light:       #{color.scale(#0a0a0a, $lightness: 80%)};
-    --palette-accent:         #36aea7;
+    --palette-accent:         hsl(177, 53%, 44%);
     --palette-accent-darker:  #0C847D;
 
     // Size

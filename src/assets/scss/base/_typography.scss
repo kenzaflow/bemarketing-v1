@@ -113,11 +113,15 @@ i, .font-style\:italic {
 }
 
 html *, .font-weight\:default {
-    font-weight: 300;
+    font-weight: normal;
 }
 
 b, strong, .font-weight\:bold {
     font-weight: 600;
+}
+
+.font-weight\:bolder {
+    font-weight: 700;
 }
 
 br {

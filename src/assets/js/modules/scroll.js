@@ -1,9 +1,8 @@
-const parent = document.querySelectorAll('.cards.scroll-snap-parent')
-/* const children = parent.querySelector('.team .cards .card') */
-
-const types = ['mousedown', 'mouseup', 'mouseleave', 'mousemove']
-
 export function initScroll() {
+    const types = ['mousedown', 'mouseup', 'mouseleave', 'mousemove']
+
+    const parent = document.querySelectorAll('.cards.scroll-snap-parent')
+
     parent.forEach((element) => {
         types.forEach((type) => {
             element.addEventListener(type, (event) =>
