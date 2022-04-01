@@ -5,10 +5,11 @@
 }
 
 *::-webkit-scrollbar {
-    width: 0.6rem;
-    height: 0.6rem;
+    width: calc(var(--font-base) * 0.75);
+    height: calc(var(--font-base) * 0.75);
     background-color: hsla(0, 0%, 98%, 0.05);
     cursor: default;
+    will-change: position;
 }
 
 *::-webkit-scrollbar-track {

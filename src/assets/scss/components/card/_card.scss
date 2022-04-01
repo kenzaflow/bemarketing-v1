@@ -7,6 +7,22 @@
     scroll-behavior: smooth;
     grid-auto-flow: column;
 
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        border-radius: var(--font-base);
+    }
+
+    &.white::-webkit-scrollbar-thumb {
+        background-color: rgb(255,255,255, 0.7);
+        box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+        &:hover{
+            background-color: var(--palette-gray-dark);
+        }
+        &:hover, &:active {
+            box-shadow: none;
+        }
+    }
+
     -webkit-user-drag: none;
 
     overscroll-behavior-x: contain;
@@ -41,7 +57,7 @@
         align-self: center;
         aspect-ratio: 4 / 3;
         width: auto;
-        background-color: hsla(0, 0%, 98%, 0.05);
+        background-color: hsla(0, 0%, 98%, 0.00);
         transition: none var(--animation-default);
         transition-property: background-color;
         &.simple {
@@ -69,12 +85,21 @@
             grid-template-rows: 1fr;
         }
 
+        .picture {
+            background-color: var(--palette-foreground);
+            cursor: w-resize;
+            *, & > * {
+                -webkit-user-drag: none;
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+
         .picture, .title {
             height: 75%;
             max-height: 145px;
             aspect-ratio: 1 / 1;
             width: auto;
-            background-color: hsla(0, 0%, 98%, 0.1);
             border-radius: 100%;
             overflow: hidden;
             img {
