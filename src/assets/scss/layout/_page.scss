@@ -102,6 +102,44 @@ section {
             font-weight: 400;
             font-size: calc(var(--font-base) * 1.22);
             line-height: 32px;
+            br {
+                height: calc(var(--font-base) * 2);
+            }
+        }
+        .title-home {
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: calc(var(--font-base) * 2);
+            line-height: 1.35;
+            @media (min-width: 425px) {
+                font-size: calc(var(--font-base) * 2.3);
+            }
+            @media (min-width: 1024px) {
+                font-size: calc(var(--font-base) * 2.8);
+            }
+            @media (min-width: 1440px) {
+                font-size: calc(var(--font-base) * 3.56);
+            }
+        }
+        .subtitle-home {
+
+            max-width: 40ch;
+            justify-self: center;
+            text-align: left;
+
+            font-size: calc(var(--font-base) * 1.3);
+            line-height: 1.3;
+
+            @media (min-width: 425px) {
+                font-size: calc(var(--font-base) * 1.6);
+            }
+            @media (min-width: 768px) {
+                font-size: calc(var(--font-base) * 1.6);
+            }
+            @media (min-width: 1440px) {
+                font-size: calc(var(--font-base) * 2);
+            }
         }
     }
     &:first-of-type {
@@ -119,6 +157,9 @@ section.statusForm {
     left: 0;
     right: 0;
     z-index: 9999;
+    .subtitle-home {
+        /* text-align: center; */
+    }
 }
 
 section.home {
@@ -140,41 +181,11 @@ section.home {
     }
 
     .content {
+        max-width: var(--size-max-width-large);
         display: grid;
         align-content: center;
         gap: 5vh;
-        .title, .subtitle {
-            filter: drop-shadow(0px 3px 6px hsla(0, 0%, 0%, 0.5));
-            @media (max-width: 425px) {
-                & {
-                    font-size: calc(var(--font-base) * 2.3);
-                    text-align: center;
-                    line-height: 1.35;
-                }
-            }
-        }
-        .title {
-            text-transform: uppercase;
-            font-size: calc(var(--font-base) * 3);
-        }
-        .subtitle {
-            max-width: 30ch;
-            @media (max-width: 425px) {
-                & {
-                    font-size: calc(var(--font-base) * 1.35);
-                    text-align: center;
-                    line-height: 1.35;
-                }
-            }
-        }
-        /* @media (max-width: 768px) {
-            .title, .subtitle {
-                font-size: var(--font-size-h4);
-            }
-            .subtitle {
-                font-size: var(--font-size-h5);
-            }
-        } */
+        filter: drop-shadow(0px 3px 6px hsla(0, 0%, 0%, 0.5));
     }
 
 }
@@ -218,6 +229,9 @@ section.team, section.services {
                 grid-column: 1;
                 grid-row: 1;
             }
+            .title {
+                padding: 0 calc(var(--font-base) * 2);
+            }
             .cards {
                 place-self: center;
             }
@@ -235,12 +249,13 @@ section.services {
             background-image: url('../img/services_mobile.webp');
         }}
         opacity: 0.4;
-        filter: grayscale(1) brightness(0.8) blur(3px);
+        filter: grayscale(1) brightness(0.8);
         background-attachment: fixed;
     }
 
     .background:after {
         background: linear-gradient(120deg, transparent, var(--palette-accent-darker));
+        box-shadow: inset 0 0 6vw 6vw rgba(0, 0, 0, 0.5);
     }
 }
 section.contact {
@@ -253,35 +268,45 @@ section.contact {
     .content {
         display: grid;
 
+        max-width: var(--size-max-width-large);
+        max-width: unset;
+
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         grid-template-areas:
-        "title"
-        "description"
-        "short-description"
+        "text"
         "formspree"
         "direct"
         "socials";
 
         @media (min-width: 1024px) {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, auto);
+            grid-template-rows: repeat(2, auto);
             grid-template-areas:
-            "title title"
-            "description formspree"
-            "short-description formspree"
+            "text formspree"
             "direct socials";
+            & > * {
+                max-width: 470px;
+            }
+            justify-items: center;
+            padding: 0;
+            place-items: center;
+            & {
+                padding-left: var(--font-base);
+                padding-right: var(--font-base);
+            }
         }
 
-        .title { grid-area: title; }
-        .description { grid-area: description; }
-        .short-description { grid-area: short-description; }
+        .contact-text { grid-area: text;}
         .direct { grid-area: direct; }
         .formspree { grid-area: formspree; }
         .socials { grid-area: socials; }
 
         .socials img, .socials a img, .direct img, .direct a img {
             width: calc(var(--font-base) * 1.5);
+            @media (min-width: 1024px) {
+                width: calc(var(--font-base) * 2);
+            }
             aspect-ratio: 1 / 1;
             height: auto;
             display: block;
@@ -313,15 +338,20 @@ section.contact {
             font-weight: 700;
         }
 
+        .contact-text {
+            height: min-content;
+        }
+
         .formspree {
             display: grid;
-            width: 90%;
+            width: 100%;
             justify-self: center;
-            height: 100%;
+            height: min-content;
             justify-items: center;
 
             align-content: center;
             align-items: center;
+            align-self: end;
             gap: var(--font-base);
             .input.text {
                 width: 100%;
@@ -333,7 +363,8 @@ section.contact {
             }
             @media (min-width: 426px) {
                 .input.button {
-                    justify-self: end;
+                    /* justify-self: end; */
+                    margin-top: calc(var(--font-base) * 2);
                 }
                 }
             .input.text {
@@ -361,6 +392,10 @@ section.contact {
             grid-auto-flow: column;
             place-content: center;
             gap: calc(var(--font-base) * 1.5);
+        }
+
+        .socials, .direct {
+            align-self: flex-start;
         }
     }
     

@@ -1,3 +1,5 @@
+const formEnabled = true
+
 const section = document.createElement('section')
 
 function showStatus({ title = '', text = '' }) {
@@ -7,6 +9,10 @@ function showStatus({ title = '', text = '' }) {
             section.querySelector('#statusText') != null
         ) {
             clearInterval(intervalID)
+            if (!formEnabled) title = 'Ups!'
+            if (!formEnabled)
+                text =
+                    'El formulario está deshabilitado temporalmente.<br>Porfavor, intente por otros medios.'
             section.querySelector('#statusTitle').innerHTML = title
             section.querySelector('#statusText').innerHTML = text
         }
@@ -26,9 +32,9 @@ function initStatus({ title = '', text = '' }) {
     section.id = 'statusForm'
     section.classList.add('statusForm')
     section.innerHTML = `<div class="content">
-                            <p id="statusTitle" class="font-size:h2 font:heading">${title}</p>
+                            <p id="statusTitle" class="font-size:h2 font:heading title-home">${title}</p>
                             <br class="size:2">
-                            <p id="statusText" class="font-size:h4 font:heading color:accent">${text}</p>
+                            <p id="statusText" class="font-size:h4 font:heading color:accent subtitle-home">${text}</p>
                         </div>`
     document.querySelector('.wrapper').appendChild(section)
     document.querySelector('.wrapper').classList.add('viewingStatus')
@@ -52,7 +58,7 @@ export function initForm() {
         const data = new FormData(event.target)
 
         fetch(event.target.action, {
-            method: form.method,
+            method: formEnabled ? form.method : 'GET',
             body: data,
             headers: {
                 Accept: 'application/json',
@@ -62,7 +68,7 @@ export function initForm() {
                 if (response.ok) {
                     showStatus({
                         title: 'Recibimos tu mensaje',
-                        text: 'Muy pronto te responderemos. Gracias por elegirnos.',
+                        text: 'Muy pronto te responderemos.<br>Gracias por elegirnos.',
                     })
                     form.reset()
                 } else {

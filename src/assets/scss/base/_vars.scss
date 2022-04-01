@@ -29,13 +29,14 @@
     --font-width:               50ch;           // characters per line
 
     // Palette
-
-    --palette-background:     hsl(0, 0%, 4%);
-    --palette-foreground:     hsl(0, 0%, 98%);
-    --palette-gray-dark:        #{color.scale(#fafafa, $lightness: -80%)};
-    --palette-gray-light:       #{color.scale(#0a0a0a, $lightness: 80%)};
+    $palette-background:      #000;
+    $palette-foreground:      hsl(0, 0%, 96%);
+    --palette-background:       #{$palette-background};
+    --palette-foreground:       #{$palette-foreground};
+    --palette-gray-dark:        #{color.scale($palette-foreground, $lightness: -80%)};
+    --palette-gray-light:       #{color.scale($palette-background, $lightness: 80%)};
     --palette-accent:         hsl(177, 53%, 44%);
-    --palette-accent-darker:  #0C847D;
+    --palette-accent-darker:  hsl(177, 83%, 28%);
 
     // Size
 

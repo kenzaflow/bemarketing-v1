@@ -12,7 +12,7 @@ function startDebugging() {
     }
 
     window.addEventListener('keydown', (event) => {
-        if (event.key === 'o' && event.ctrlKey) {
+        /* if (event.key === 'o' && event.ctrlKey) {
             event.preventDefault()
             document.body.toggleAttribute('outline')
             if (document.body.hasAttribute('outline')) {
@@ -20,7 +20,20 @@ function startDebugging() {
             } else {
                 localStorage.removeItem('outline')
             }
-        }
+        } */
+        /* if (event.key === 'd' && event.ctrlKey) {
+            let root = document.documentElement
+            event.preventDefault()
+            if (
+                root.style.getPropertyValue('--palette-background') ===
+                    '#0a0a0a' ||
+                root.style.getPropertyValue('--palette-background') === ''
+            ) {
+                root.style.setProperty('--palette-background', '#0a0a0a')
+            } else {
+                root.style.setProperty('--palette-background', '#000')
+            }
+        } */
     })
 }
 

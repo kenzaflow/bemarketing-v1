@@ -1,0 +1,16 @@
+.logo {
+    span {
+        height: min-content;
+        align-self: center;
+        line-height: 1;
+        font-size: calc(var(--font-base) * 3.3);
+        letter-spacing: calc(var(--font-base) * -0.5);
+        width: calc(var(--font-base) * 3.3 * 1.55);
+        text-align: left;
+    }
+}
+
+footer .logo span {
+    font-size: calc(var(--font-base) * 2);
+    letter-spacing: calc(var(--font-base) * -0.3);
+}
