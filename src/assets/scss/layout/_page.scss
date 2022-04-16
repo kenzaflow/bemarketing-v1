@@ -250,7 +250,8 @@ section.services {
         }}
         opacity: 0.4;
         filter: grayscale(1) brightness(0.8);
-        background-attachment: fixed;
+        // calcula el fondo en cada scroll >:(
+        /* background-attachment: fixed; */
     }
 
     .background:after {

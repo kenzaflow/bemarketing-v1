@@ -26,6 +26,14 @@ const handleClose = () => {
     document
         .querySelector('#menu-opener')
         .removeEventListener('click', handleClose)
+    document
+        .querySelector('.logo.link.big.animated')
+        .removeEventListener('click', handleLogoClick)
+    location.hash = ""
+}
+
+const handleLogoClick = (event) => {
+    event.preventDefault()
 }
 
 function initStatus({ title = '', text = '' }) {
@@ -43,6 +51,12 @@ function initStatus({ title = '', text = '' }) {
     document
         .querySelector('#menu-opener')
         .addEventListener('click', handleClose)
+
+    document
+        .querySelector('.logo.link.big.animated')
+        .addEventListener('click', handleLogoClick)
+
+    location.hash = "/thanksyou"
 }
 
 export function initForm() {

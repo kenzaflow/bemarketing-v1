@@ -10,31 +10,6 @@ function startDebugging() {
     if (localStorage.getItem('outline') !== null) {
         document.body.setAttribute('outline', '')
     }
-
-    window.addEventListener('keydown', (event) => {
-        /* if (event.key === 'o' && event.ctrlKey) {
-            event.preventDefault()
-            document.body.toggleAttribute('outline')
-            if (document.body.hasAttribute('outline')) {
-                localStorage.setItem('outline', '')
-            } else {
-                localStorage.removeItem('outline')
-            }
-        } */
-        /* if (event.key === 'd' && event.ctrlKey) {
-            let root = document.documentElement
-            event.preventDefault()
-            if (
-                root.style.getPropertyValue('--palette-background') ===
-                    '#0a0a0a' ||
-                root.style.getPropertyValue('--palette-background') === ''
-            ) {
-                root.style.setProperty('--palette-background', '#0a0a0a')
-            } else {
-                root.style.setProperty('--palette-background', '#000')
-            }
-        } */
-    })
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -62,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'scroll',
         debounce((e) => {
             if (window.scrollY === 0)
-                document.body.classList.remove('has-scroll')
+                document.body.classList.remove('has-scroll', 'no-scroll-animation')
             if (window.scrollY > 0)
                 document.body.classList.add('has-scroll', 'no-scroll-animation')
         }, 10)
