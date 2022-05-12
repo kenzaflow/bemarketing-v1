@@ -2,11 +2,11 @@
 
 Este repositorio contiene los recursos requeridos para construir la página de Be Marketing junto a su documentación.
 
-## [Previsualización](https://kenza.ar/bemarketing/build/)
+## [Previsualización](https://kenza.ar/bemarketing-v1/build/)
 
-![package version](https://img.shields.io/github/package-json/v/kenzaflow/bemarketing)
-![commit activity](https://img.shields.io/github/commit-activity/w/kenzaflow/bemarketing)
-![last commit](https://img.shields.io/github/last-commit/kenzaflow/bemarketing)
+![package version](https://img.shields.io/github/package-json/v/kenzaflow/bemarketing-v1)
+![commit activity](https://img.shields.io/github/commit-activity/w/kenzaflow/bemarketing-v1)
+![last commit](https://img.shields.io/github/last-commit/kenzaflow/bemarketing-v1)
 
 ---
 
