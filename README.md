@@ -1,3 +1,7 @@
+# Obsoleto
+
+Es la primera versión realizada, no representa el estado actual del sitio
+
 # Maqueta del sitio web de Be Marketing
 
 Este repositorio contiene los recursos requeridos para construir la página de Be Marketing junto a su documentación.
